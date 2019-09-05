@@ -5,11 +5,6 @@ require "yaml"
 
 def load_library(file)
   newhash ={:get_meaning => {}, :get_emoticon => {}}
-  
-  
-  
-  
-  
   emote = YAML.load_file(file)
   file.each do |get_emoticon, get_meaning|
     newhash[get]
