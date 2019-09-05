@@ -5,7 +5,7 @@ def load_library(file)
   YAML.load_file(file).each do |char_meaning, arr|
     eng, japn = arr
     library["get meaning"[engl] = japn
-    library["get_emoticon"][japanese] = char_meaning
+    library["get_emoticon"][japn] = char_meaning
   end
   library
 end
