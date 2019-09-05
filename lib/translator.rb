@@ -12,3 +12,4 @@ end
 
 def get_japanese_emoticon(yml,emoticon)
 end
+
