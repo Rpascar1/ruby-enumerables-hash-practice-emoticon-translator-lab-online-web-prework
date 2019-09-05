@@ -1,11 +1,32 @@
-require "yaml"
 
-def load_library(the_file_path)
-  newhash ={"get_meaning": {}, "get_emoticon": {}}
-  new = YAML.load_file(the_file_path).each do |content, arr|
-    eng, japn = arr
-    newhash["get_emoticon"][eng] = japn
-    newhash["get_meaning"][japn] = content
+require 'yaml'
+
+def load_library(file_path)
+  library = {"get_meaning" => {}, "get_emoticon" => {} }
+  YAML.load_file(file_path).each do |meaning, array|
+    english, japanese = array
+    library["get_emoticon"][english] = japanese
+    library["get_meaning"][japanese] = meaning
+  end
+  library
 end
-  newhash
+
+def get_japanese_emoticon(file_path, emoticon)
+  library = load_library(file_path)
+  result = library["get_emoticon"][emoticon]
+  if result
+    result
+  else
+    "Sorry, that emoticon was not found"
+  end
+end
+
+def get_english_meaning(file_path, emoticon)
+  library = load_library(file_path)
+  result = library["get_meaning"][emoticon]
+  if result
+    result
+  else
+    "Sorry, that emoticon was not found"
+  end
 end
