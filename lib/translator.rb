@@ -13,4 +13,7 @@ def load_library(file)
 end
 
 def get_japanese_emoticon(yml,emoticon)
+hash_library = load_library
+
+
 end
