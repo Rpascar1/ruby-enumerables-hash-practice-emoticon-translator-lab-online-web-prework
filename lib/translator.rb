@@ -14,5 +14,7 @@ end
 
 def get_japanese_emoticon(file,emoticon)
   hash_library = load_library(file)
-  hash_library["get_emoticon"][emoticon]
+  hash_library["get_emoticon"][emoticon] ? 
+    hash_library["get_emoticon"][emoticon] :
+    
 end
