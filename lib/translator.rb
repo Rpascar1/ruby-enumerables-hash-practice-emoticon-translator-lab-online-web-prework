@@ -10,3 +10,5 @@ def load_library(file)
   hash
 end
 
+def get_japanese_emoticon(yml,emoticon)
+end
