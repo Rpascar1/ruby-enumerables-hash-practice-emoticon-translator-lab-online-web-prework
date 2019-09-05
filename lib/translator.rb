@@ -1,7 +1,4 @@
-# require modules here
-
 require "yaml"
-
 
 def load_library(the_file_path)
   newhash ={"get_meaning": {}, "get_emoticon": {}}
