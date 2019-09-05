@@ -3,9 +3,10 @@
 require 'yaml'
 
 def load_library(file)
-  libaray = {"get_meaning" => {}, "get_emoticon" => {} }
+  library = {"get_meaning" => {}, "get_emoticon" => {} }
   YAML.load_file(file).each do |meaning,emoticon|
   end
+  library
 end    
 
 
