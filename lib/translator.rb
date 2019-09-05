@@ -6,7 +6,6 @@ require "yaml"
 def load_library(file)
   newhash ={:get_meaning => {}, :get_emoticon => {}}
   emote = YAML.load_file(file)
-  end
   newhash
 end
 
