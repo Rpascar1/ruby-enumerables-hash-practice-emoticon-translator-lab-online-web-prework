@@ -4,7 +4,7 @@ require "yaml"
 
 
 def load_library(file)
-  newhash ={"greeting"=>{},}
+  newhash ={"get_meaning"=>{},""}
   
   
   
